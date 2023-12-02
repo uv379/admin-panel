@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&family=Ubuntu:wght@500&display=swap');
+/* usar fuentes importadas 
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/* toda la barrra de nav */
+nav {
+    background-color: #161A30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3.8rem;
+}
+
+/* contenedor de la imagen y titulo del nav */
+.navtittle {
+    display: flex;
+    align-items: center;
+}
+/* imagen del logo del nav*/
+.imglogo {
+    width: 2.8rem;
+    height: 2rem;
+}
+/* lista del link */
+.ulnav {
+    list-style: none;
+    text-transform: none;
+    display: flex;
+
+}
+/* elementos de lista del link */
+.listItem {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    margin: 0 1rem;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+
+}
+/* estilo al pasar encima el mouse */
+.listItem:hover {
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    transition: 0.4s;
+}
+/* texto a la par del icono de ba barra de nav */
+.icontxt {
+    color: #F0ECE5;
+    font-size: 1.8rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+/* icono responsivo del nav no se muestra en pc pero en celu si */
+.menubar {
+    display: none;
+}
+/* links */
+a {
+    text-decoration: none;
+    color: #F0ECE5;
+}
+
+
+/* medida responsiva para dispositivos */
+@media (width <= 767px) {
+    /* texto a la par del icono del nav*/
+    .icontxt {
+        font-size: 1.4rem;
+    }
+
+    /*lista que se esconde por defecto*/
+    .ullist {
+        background-color: #161A30;
+        position: absolute;
+        top: 3.8rem;
+        padding: 1rem 3rem;
+        right: -100%;
+        transition: 0.2s;
+        border-radius: 0 0 0 0.5rem;
+    }
+
+/* estilos para la lista ul en el cel */
+    ul {
+        display: grid;
+        grid-template-columns: 5rem;
+        grid-template-rows: 2rem 2rem 2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* menu o icono de barras que se muestra en moviles */
+    .menubar {
+        display: inline-block;
+        margin-right: 0.8rem;
+    }
+    /* elementos li de la lista ul */
+    .listItem {
+        font-size: 1rem;
+    }
+
+    /* item de lista 1 y 2 */
+    .listItem1, .listItem2 {
+        border-bottom: solid rgb(0, 174, 255) 0.1rem;
+    }
+
+    /* elemento de lista al pasar el mouse */
+    .listItem:hover {
+        border: none;
+    }
+
+}
+/* muestra la lista en modo dispositivos pequeños */
+.ullistshow {
+    right: 0;
+    transition: 0.2s;
+
+}
+/* se usa para mostrar y ocultar cosas con esta clase */
+.hide {
+    display: none;
+}
